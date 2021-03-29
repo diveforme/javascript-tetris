@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    height: 100%;
+    overflow: hidden;
+}
+
+.score{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+/* 테트리스 판 전체 하나를 ul 로 묶음 */
+.playground > ul{ 
+    border: 1px solid #333;
+    width: 250px;
+    margin: 0 auto;
+}
+
+/* 전체 테트리스 판 하나(ul)안에서, 각 20개의 행을 li로 묶음 */
+.playground > ul > li{
+    width:100%;
+    height: 25px;
+
+}
+
+/* 각 가로줄(li)안의 10개의 칸을 ul로 묶음. 가로로 배치되게 하기 위해 flex 로 설정 */
+.playground > ul > li > ul{ 
+    display: flex;
+}
+
+/* 각 네모칸들 */
+.playground > ul > li > ul > li{
+    width: 25px;
+    height: 25px;
+    outline: 1px solid #ccc;
+}
